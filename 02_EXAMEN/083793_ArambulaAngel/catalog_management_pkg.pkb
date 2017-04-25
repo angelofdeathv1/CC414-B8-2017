@@ -1,130 +1,188 @@
-CREATE OR REPLACE PACKAGE BODY EXAMEN02.CATALOG_MANAGEMENT_PKG
+CREATE OR REPLACE PACKAGE BODY examen02.catalog_management_pkg
 AS
-    PROCEDURE INSERT_MUSICIAN (IN_MUSICIAN_NAME       IN     VARCHAR2,
-                               IN_DATE_BIRTH          IN     DATE,
-                               IN_DATE_DIED           IN     DATE,
-                               IN_ORIGIN_CITY_ID      IN     INTEGER,
-                               IN_RESIDENCE_CITY_ID   IN     INTEGER,
-                               OUT_MUSICIAN_ID           OUT INTEGER)
+    PROCEDURE insert_musician (in_musician_name       IN     VARCHAR2,
+                               in_date_birth          IN     DATE,
+                               in_date_died           IN     DATE,
+                               in_origin_city_id      IN     INTEGER,
+                               in_residence_city_id   IN     INTEGER,
+                               out_musician_id           OUT INTEGER)
     AS
-        N_MUSICIAN_ID   NUMBER;
+        n_musician_id   NUMBER;
     BEGIN
-        SELECT EXAMEN02.MUSICIANS_SEQ.NEXTVAL INTO N_MUSICIAN_ID FROM DUAL;
+        SELECT examen02.musicians_seq.NEXTVAL INTO n_musician_id FROM DUAL;
 
         BEGIN
-            INSERT INTO EXAMEN02.MUSICIANS (MUSICIAN_ID,
-                                            MUSICIAN_NAME,
-                                            DATE_BIRTH,
-                                            DATE_DIED,
-                                            ORIGIN_CITY_ID,
-                                            RESIDENCE_CITY_ID)
-                 VALUES (N_MUSICIAN_ID,
-                         IN_MUSICIAN_NAME,
-                         IN_DATE_BIRTH,
-                         IN_DATE_DIED,
-                         IN_ORIGIN_CITY_ID,
-                         IN_RESIDENCE_CITY_ID);
+            INSERT INTO examen02.musicians (musician_id,
+                                            musician_name,
+                                            date_birth,
+                                            date_died,
+                                            origin_city_id,
+                                            residence_city_id)
+                 VALUES (n_musician_id,
+                         in_musician_name,
+                         in_date_birth,
+                         in_date_died,
+                         in_origin_city_id,
+                         in_residence_city_id);
         EXCEPTION
             WHEN OTHERS
             THEN
-                OUT_MUSICIAN_ID := -1;
+                out_musician_id := -1;
         END;
 
-        OUT_MUSICIAN_ID := N_MUSICIAN_ID;
-    END INSERT_MUSICIAN;
+        out_musician_id := n_musician_id;
+    END insert_musician;
 
-    PROCEDURE INSERT_BAND (IN_BAND_NAME             IN     VARCHAR2,
-                           IN_MUSIC_GENRE_ID        IN     INTEGER,
-                           IN_BAND_HOME_ID          IN     INTEGER,
-                           IN_BAND_CREATION_DATE    IN     DATE,
-                           IN_CONTACT_MUSICIAN_ID   IN     INTEGER,
-                           OUT_BAND_ID                 OUT INTEGER)
+    PROCEDURE insert_band (in_band_name             IN     VARCHAR2,
+                           in_music_genre_id        IN     INTEGER,
+                           in_band_home_id          IN     INTEGER,
+                           in_band_creation_date    IN     DATE,
+                           in_contact_musician_id   IN     INTEGER,
+                           out_band_id                 OUT INTEGER)
     AS
-        N_BAND_ID   NUMBER;
+        n_band_id   NUMBER;
     BEGIN
-        SELECT EXAMEN02.BANDS_SEQ.NEXTVAL INTO N_BAND_ID FROM DUAL;
+        SELECT examen02.bands_seq.NEXTVAL INTO n_band_id FROM DUAL;
 
         BEGIN
-            INSERT INTO EXAMEN02.BANDS (BAND_ID,
-                                        BAND_NAME,
-                                        MUSIC_GENRE_ID,
-                                        BAND_HOME_ID,
-                                        BAND_CREATION_DATE,
-                                        CONTACT_MUSICIAN_ID)
-                 VALUES (N_BAND_ID,
-                         IN_BAND_NAME,
-                         IN_MUSIC_GENRE_ID,
-                         IN_BAND_HOME_ID,
-                         IN_BAND_CREATION_DATE,
-                         IN_CONTACT_MUSICIAN_ID);
+            INSERT INTO examen02.bands (band_id,
+                                        band_name,
+                                        music_genre_id,
+                                        band_home_id,
+                                        band_creation_date,
+                                        contact_musician_id)
+                 VALUES (n_band_id,
+                         in_band_name,
+                         in_music_genre_id,
+                         in_band_home_id,
+                         in_band_creation_date,
+                         in_contact_musician_id);
         EXCEPTION
             WHEN OTHERS
             THEN
-                N_BAND_ID := -1;
+                n_band_id := -1;
         END;
 
-        OUT_BAND_ID := N_BAND_ID;
-    END INSERT_BAND;
+        out_band_id := n_band_id;
+    END insert_band;
 
-    PROCEDURE INSERT_BAND_MUSICIAN (IN_BAND_ID             IN     INTEGER,
-                                    IN_MUSICIAN_ID         IN     INTEGER,
-                                    OUT_BAND_MUSICIAN_ID      OUT INTEGER)
+    PROCEDURE insert_band_musician (in_band_id             IN     INTEGER,
+                                    in_musician_id         IN     INTEGER,
+                                    out_band_musician_id      OUT INTEGER)
     AS
-        N_BAND_MUSICIAN_ID   INTEGER;
+        n_band_musician_id   INTEGER;
     BEGIN
         BEGIN
-            SELECT BAND_MUSICIAN_ID
-              INTO N_BAND_MUSICIAN_ID
-              FROM EXAMEN02.BANDS_MUSICIANS
-             WHERE BAND_ID = IN_BAND_ID AND IN_MUSICIAN_ID = IN_MUSICIAN_ID;
+            SELECT band_musician_id
+              INTO n_band_musician_id
+              FROM examen02.bands_musicians
+             WHERE band_id = in_band_id AND musician_id = in_musician_id;
         EXCEPTION
             WHEN NO_DATA_FOUND
             THEN
-                SELECT EXAMEN02.BAND_MUSICIAN_SEQ.NEXTVAL
-                  INTO N_BAND_MUSICIAN_ID
+                SELECT examen02.band_musician_seq.NEXTVAL
+                  INTO n_band_musician_id
                   FROM DUAL;
 
                 INSERT
-                  INTO EXAMEN02.BANDS_MUSICIANS (BAND_MUSICIAN_ID,
-                                                 BAND_ID,
-                                                 MUSICIAN_ID)
-                VALUES (N_BAND_MUSICIAN_ID, IN_BAND_ID, IN_MUSICIAN_ID);
+                  INTO examen02.bands_musicians (band_musician_id,
+                                                 band_id,
+                                                 musician_id)
+                VALUES (n_band_musician_id, in_band_id, in_musician_id);
         END;
 
-        OUT_BAND_MUSICIAN_ID := N_BAND_MUSICIAN_ID;
-    END INSERT_BAND_MUSICIAN;
+        out_band_musician_id := n_band_musician_id;
+    END insert_band_musician;
 
-    PROCEDURE INSERT_BAND_MUSIC_INSTRUMENT (
-        IN_BAND_MUSICIAN_ID   IN     INTEGER,
-        IN_INSTRUMENT_ID      IN     INTEGER,
-        IN_MUSIC_GENRE_ID     IN     INTEGER,
-        OUT_RESPONSE             OUT INTEGER)
+    PROCEDURE insert_band_music_instrument (
+        in_band_musician_id   IN     INTEGER,
+        in_instrument_id      IN     INTEGER,
+        in_music_genre_id     IN     INTEGER,
+        out_response             OUT INTEGER)
     AS
-        N_BAND_MUSICIAN_ID   INTEGER;
+        n_band_musician_id   INTEGER;
     BEGIN
         BEGIN
-            SELECT BAND_MUSICIAN_ID
-              INTO N_BAND_MUSICIAN_ID
-              FROM EXAMEN02.BANDS_MUSICIANS_INSTRUMENTS
-             WHERE     BAND_MUSICIAN_ID = IN_BAND_MUSICIAN_ID
-                   AND INSTRUMENT_ID = IN_INSTRUMENT_ID;
+            SELECT band_musician_id
+              INTO n_band_musician_id
+              FROM examen02.bands_musicians_instruments
+             WHERE     band_musician_id = in_band_musician_id
+                   AND instrument_id = in_instrument_id;
 
-            OUT_RESPONSE := 0;
+            out_response := 0;
         EXCEPTION
             WHEN NO_DATA_FOUND
             THEN
                 INSERT
-                  INTO EXAMEN02.BANDS_MUSICIANS_INSTRUMENTS (
-                           BAND_MUSICIAN_ID,
-                           INSTRUMENT_ID,
-                           MUSIC_GENRE_ID)
+                  INTO examen02.bands_musicians_instruments (
+                           band_musician_id,
+                           instrument_id,
+                           music_genre_id)
                     VALUES (
-                               IN_BAND_MUSICIAN_ID,
-                               IN_INSTRUMENT_ID,
-                               IN_MUSIC_GENRE_ID);
+                               in_band_musician_id,
+                               in_instrument_id,
+                               in_music_genre_id);
 
-                OUT_RESPONSE := 1;
+                out_response := 1;
         END;
-    END INSERT_BAND_MUSIC_INSTRUMENT;
-END CATALOG_MANAGEMENT_PKG;
+    END insert_band_music_instrument;
+
+    PROCEDURE insert_concert (in_concert_venue_id       IN     INTEGER,
+                              in_concert_date           IN     DATE,
+                              in_concert_organizer_id   IN     INTEGER,
+                              out_concert_id               OUT INTEGER)
+    AS
+        n_concert_id   INTEGER;
+    BEGIN
+        SELECT examen02.concerts_seq.NEXTVAL INTO n_concert_id FROM DUAL;
+
+        BEGIN
+            INSERT INTO examen02.concerts (concert_id,
+                                           concert_venue_id,
+                                           concert_date,
+                                           concert_organizer_id)
+                 VALUES (n_concert_id,
+                         in_concert_venue_id,
+                         in_concert_date,
+                         in_concert_organizer_id);
+        EXCEPTION
+            WHEN OTHERS
+            THEN
+                n_concert_id := -1;
+        END;
+
+        out_concert_id := n_concert_id;
+    END insert_concert;
+
+    PROCEDURE insert_concert_band (in_concert_id     IN     INTEGER,
+                                   in_band_id        IN     INTEGER,
+                                   in_played_songs   IN     INTEGER,
+                                   in_band_order     IN     INTEGER,
+                                   out_response         OUT INTEGER)
+    AS
+        n_concert_band_id   INTEGER;
+    BEGIN
+        BEGIN
+            SELECT concert_id
+              INTO n_concert_band_id
+              FROM examen02.concerts_bands
+             WHERE concert_id = in_concert_id AND band_id = in_band_id;
+
+            out_response := 0;
+        EXCEPTION
+            WHEN NO_DATA_FOUND
+            THEN
+                INSERT INTO examen02.concerts_bands (concert_id,
+                                                     band_id,
+                                                     played_songs,
+                                                     band_order)
+                     VALUES (in_concert_id,
+                             in_band_id,
+                             in_played_songs,
+                             in_band_order);
+
+                out_response := 1;
+        END;
+    END insert_concert_band;
+END catalog_management_pkg;
 /

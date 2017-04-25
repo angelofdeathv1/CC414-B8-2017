@@ -1,27 +1,38 @@
-CREATE OR REPLACE PACKAGE EXAMEN02.CATALOG_MANAGEMENT_PKG
+CREATE OR REPLACE PACKAGE examen02.catalog_management_pkg
 AS
-    PROCEDURE INSERT_MUSICIAN (IN_MUSICIAN_NAME       IN     VARCHAR2,
-                               IN_DATE_BIRTH          IN     DATE,
-                               IN_DATE_DIED           IN     DATE,
-                               IN_ORIGIN_CITY_ID      IN     INTEGER,
-                               IN_RESIDENCE_CITY_ID   IN     INTEGER,
-                               OUT_MUSICIAN_ID           OUT INTEGER);
+    PROCEDURE insert_musician (in_musician_name       IN     VARCHAR2,
+                               in_date_birth          IN     DATE,
+                               in_date_died           IN     DATE,
+                               in_origin_city_id      IN     INTEGER,
+                               in_residence_city_id   IN     INTEGER,
+                               out_musician_id           OUT INTEGER);
 
-    PROCEDURE INSERT_BAND (IN_BAND_NAME             IN     VARCHAR2,
-                           IN_MUSIC_GENRE_ID        IN     INTEGER,
-                           IN_BAND_HOME_ID          IN     INTEGER,
-                           IN_BAND_CREATION_DATE    IN     DATE,
-                           IN_CONTACT_MUSICIAN_ID   IN     INTEGER,
-                           OUT_BAND_ID                 OUT INTEGER);
+    PROCEDURE insert_band (in_band_name             IN     VARCHAR2,
+                           in_music_genre_id        IN     INTEGER,
+                           in_band_home_id          IN     INTEGER,
+                           in_band_creation_date    IN     DATE,
+                           in_contact_musician_id   IN     INTEGER,
+                           out_band_id                 OUT INTEGER);
 
-    PROCEDURE INSERT_BAND_MUSICIAN (IN_BAND_ID             IN     INTEGER,
-                                    IN_MUSICIAN_ID         IN     INTEGER,
-                                    OUT_BAND_MUSICIAN_ID      OUT INTEGER);
+    PROCEDURE insert_band_musician (in_band_id             IN     INTEGER,
+                                    in_musician_id         IN     INTEGER,
+                                    out_band_musician_id      OUT INTEGER);
 
-    PROCEDURE INSERT_BAND_MUSIC_INSTRUMENT (
-        IN_BAND_MUSICIAN_ID   IN     INTEGER,
-        IN_INSTRUMENT_ID      IN     INTEGER,
-        IN_MUSIC_GENRE_ID     IN     INTEGER,
-        OUT_RESPONSE             OUT INTEGER);
-END CATALOG_MANAGEMENT_PKG;
+    PROCEDURE insert_band_music_instrument (
+        in_band_musician_id   IN     INTEGER,
+        in_instrument_id      IN     INTEGER,
+        in_music_genre_id     IN     INTEGER,
+        out_response             OUT INTEGER);
+
+    PROCEDURE insert_concert (in_concert_venue_id       IN     INTEGER,
+                              in_concert_date           IN     DATE,
+                              in_concert_organizer_id   IN     INTEGER,
+                              out_concert_id               OUT INTEGER);
+
+    PROCEDURE insert_concert_band (in_concert_id     IN     INTEGER,
+                                   in_band_id        IN     INTEGER,
+                                   in_played_songs   IN     INTEGER,
+                                   in_band_order     IN     INTEGER,
+                                   out_response         OUT INTEGER);
+END catalog_management_pkg;
 /
