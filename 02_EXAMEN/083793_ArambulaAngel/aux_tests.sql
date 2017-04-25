@@ -1,3 +1,4 @@
+/* Formatted on 4/25/2017 4:55:13 PM (QP5 v5.300) */
 SELECT b.band_name, m.musician_name, i.instrument_name
   FROM examen02.bands_musicians  b_m
        LEFT OUTER JOIN examen02.bands_musicians_instruments b_m_i
@@ -133,3 +134,78 @@ SELECT musician_id
  WHERE instrumentalist_rank <= 6;
 
 SELECT * FROM examen02.bands;
+
+
+  SELECT c_m.musician_id,
+         ROW_NUMBER () OVER (ORDER BY COUNT (*) DESC) composer_rank
+    FROM examen02.compositions_musicians c_m
+GROUP BY c_m.musician_id;
+
+--Arena Rock,Chicano,J-Pop;
+
+SELECT band_id, music_genre_id
+  FROM (SELECT b.band_id,
+               b.music_genre_id,
+               ROW_NUMBER ()
+               OVER (PARTITION BY b.music_genre_id
+                     ORDER BY band_creation_date DESC)
+                   band_rank
+          FROM examen02.bands  b
+               INNER JOIN examen02.music_genres m_g
+                   ON b.music_genre_id = m_g.music_genre_id
+         WHERE m_g.genre_name IN
+                   (    SELECT REGEXP_SUBSTR ('Arena Rock,Chicano,J-Pop',
+                                              '[^,]+',
+                                              1,
+                                              LEVEL)
+                          FROM DUAL
+                    CONNECT BY REGEXP_SUBSTR ('Arena Rock,Chicano,J-Pop',
+                                              '[^,]+',
+                                              1,
+                                              LEVEL)
+                                   IS NOT NULL))
+ WHERE band_rank = 1;
+
+
+    SELECT REGEXP_SUBSTR ('SMITH,ALLEN,WARD,JONES',
+                          '[^,]+',
+                          1,
+                          LEVEL)
+      FROM DUAL
+CONNECT BY REGEXP_SUBSTR ('SMITH,ALLEN,WARD,JONES',
+                          '[^,]+',
+                          1,
+                          LEVEL)
+               IS NOT NULL;
+
+--Mexico,Argentina,Germany
+
+SELECT CV.concert_venue_id, CV.city_id, c.country_name
+  FROM examen02.concert_venues  CV
+       INNER JOIN examen02.cities c ON CV.city_id = c.city_id
+ WHERE     capacity > 180000
+       AND c.country_name IN
+               (    SELECT REGEXP_SUBSTR ('Mexico,Argentina,Germany',
+                                          '[^,]+',
+                                          1,
+                                          LEVEL)
+                      FROM DUAL
+                CONNECT BY REGEXP_SUBSTR ('Mexico,Argentina,Germany',
+                                          '[^,]+',
+                                          1,
+                                          LEVEL)
+                               IS NOT NULL);
+
+  SELECT *
+    FROM examen02.concerts
+ORDER BY concert_id DESC;
+
+SELECT * FROM examen02.bands;
+
+SELECT *
+  FROM examen02.bands_musicians
+ WHERE band_id = 1005;
+
+SELECT *
+  FROM examen02.bands_musicians_instruments
+ WHERE band_musician_id = 3023;

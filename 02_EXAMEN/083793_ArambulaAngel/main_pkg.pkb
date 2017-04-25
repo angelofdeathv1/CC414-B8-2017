@@ -1,3 +1,4 @@
+/* Formatted on 4/25/2017 4:56:06 PM (QP5 v5.300) */
 CREATE OR REPLACE PACKAGE BODY examen02.main_pkg
 AS
     /******************************************************************************
@@ -142,8 +143,81 @@ AS
         Mostrar las fechas de la gira y sus venues con su ciudad y país.*/
     PROCEDURE test_04_world_tour (out_cur_bands OUT SYS_REFCURSOR)
     IS
+        n_band_id            INTEGER;
+        n_musician_id        INTEGER;
+        n_concert_id         INTEGER;
+        n_instrument_id      INTEGER;
+        n_music_genre_id     INTEGER := 12;
+        n_band_musician_id   INTEGER;
+        n_out_response       INTEGER;
+        n_concert_venue_id   INTEGER;
+        n_city_id            INTEGER;
+        s_country            VARCHAR2 (100);
+        s_country_tmp        VARCHAR2 (100);
+        d_concert_date       DATE := SYSDATE;
+        cur_musicians        SYS_REFCURSOR;
+        cur_bands            SYS_REFCURSOR;
+        cur_venues           SYS_REFCURSOR;
     BEGIN
-        NULL;
+        examen02.catalog_management_pkg.insert_band ('Angra',
+                                                     n_music_genre_id,
+                                                     1,
+                                                     SYSDATE,
+                                                     1,
+                                                     n_band_id);
+
+        examen02.utils_pkg.get_top_composers (5, cur_musicians);
+
+        LOOP
+            FETCH cur_musicians INTO n_musician_id, n_instrument_id;
+
+            EXIT WHEN cur_musicians%NOTFOUND;
+            examen02.catalog_management_pkg.insert_band_musician (
+                n_band_id,
+                n_musician_id,
+                n_band_musician_id);
+
+            examen02.catalog_management_pkg.insert_band_music_instrument (
+                n_band_musician_id,
+                n_instrument_id,
+                n_music_genre_id,
+                n_out_response);
+        END LOOP;
+
+        examen02.utils_pkg.get_top_venues ('Mexico,Argentina,Germany',
+                                           180000,
+                                           cur_venues);
+
+        LOOP
+            FETCH cur_venues INTO n_concert_venue_id, n_city_id, s_country;
+
+            EXIT WHEN cur_musicians%NOTFOUND;
+            examen02.catalog_management_pkg.insert_concert (
+                n_concert_venue_id,
+                d_concert_date,
+                12,
+                n_concert_id);
+
+            examen02.utils_pkg.get_most_recent_bands (
+                'Arena Rock,Chicano,J-Pop',
+                cur_bands);
+
+            LOOP
+                FETCH cur_bands INTO n_band_id, n_music_genre_id;
+
+                EXIT WHEN cur_bands%NOTFOUND;
+                examen02.catalog_management_pkg.insert_concert_band (
+                    n_concert_id,
+                    n_band_id,
+                    ROUND (DBMS_RANDOM.VALUE (0, 15)),
+                    1,
+                    n_out_response);
+            END LOOP;
+
+            d_concert_date := d_concert_date + 1;
+        END LOOP;
+
+        examen02.utils_pkg.get_concert_bands (n_concert_id, out_cur_bands);
     END test_04_world_tour;
 END main_pkg;
 /
