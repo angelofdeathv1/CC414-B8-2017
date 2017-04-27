@@ -1,4 +1,4 @@
-/* Formatted on 4/25/2017 4:56:06 PM (QP5 v5.300) */
+/* Formatted on 4/27/2017 1:59:51 PM (QP5 v5.300) */
 CREATE OR REPLACE PACKAGE BODY examen02.main_pkg
 AS
     /******************************************************************************
@@ -152,8 +152,9 @@ AS
         n_out_response       INTEGER;
         n_concert_venue_id   INTEGER;
         n_city_id            INTEGER;
-        s_country            VARCHAR2 (100);
-        s_country_tmp        VARCHAR2 (100);
+        n_band_order         INTEGER;
+        n_venue_order        INTEGER;
+        s_concert_ids        VARCHAR2 (200);
         d_concert_date       DATE := SYSDATE;
         cur_musicians        SYS_REFCURSOR;
         cur_bands            SYS_REFCURSOR;
@@ -189,18 +190,28 @@ AS
                                            cur_venues);
 
         LOOP
-            FETCH cur_venues INTO n_concert_venue_id, n_city_id, s_country;
+            FETCH cur_venues
+                INTO n_concert_venue_id, n_city_id, n_venue_order;
 
-            EXIT WHEN cur_musicians%NOTFOUND;
+            IF n_venue_order = 1 AND cur_venues%ROWCOUNT != 1
+            THEN
+                d_concert_date := NEXT_DAY (d_concert_date - 1, 'SUNDAY');
+            END IF;
+
+            EXIT WHEN cur_venues%NOTFOUND;
             examen02.catalog_management_pkg.insert_concert (
                 n_concert_venue_id,
                 d_concert_date,
                 12,
                 n_concert_id);
 
+            s_concert_ids := s_concert_ids || n_concert_id || ',';
             examen02.utils_pkg.get_most_recent_bands (
+                n_band_id,
                 'Arena Rock,Chicano,J-Pop',
                 cur_bands);
+
+            n_band_order := 1;
 
             LOOP
                 FETCH cur_bands INTO n_band_id, n_music_genre_id;
@@ -210,14 +221,18 @@ AS
                     n_concert_id,
                     n_band_id,
                     ROUND (DBMS_RANDOM.VALUE (0, 15)),
-                    1,
+                    n_band_order,
                     n_out_response);
+                n_band_order := n_band_order + 1;
             END LOOP;
 
             d_concert_date := d_concert_date + 1;
         END LOOP;
 
-        examen02.utils_pkg.get_concert_bands (n_concert_id, out_cur_bands);
+        s_concert_ids := s_concert_ids || '0';
+        examen02.utils_pkg.get_concert_bands (0,
+                                              s_concert_ids,
+                                              out_cur_bands);
     END test_04_world_tour;
 END main_pkg;
 /

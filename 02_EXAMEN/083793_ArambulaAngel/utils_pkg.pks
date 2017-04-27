@@ -1,4 +1,4 @@
-/* Formatted on 4/25/2017 4:27:43 PM (QP5 v5.300) */
+/* Formatted on 4/27/2017 1:34:49 PM (QP5 v5.300) */
 CREATE OR REPLACE PACKAGE examen02.utils_pkg
 AS
     PROCEDURE get_band_members_instruments (
@@ -12,9 +12,14 @@ AS
     PROCEDURE get_concert_bands (in_concert_id   IN     INTEGER,
                                  out_cur_bands      OUT SYS_REFCURSOR);
 
+    PROCEDURE get_concert_bands (in_concert_id    IN     INTEGER,
+                                 in_concert_ids   IN     VARCHAR2,
+                                 out_cur_bands       OUT SYS_REFCURSOR);
 
-    PROCEDURE get_most_recent_bands (in_band_genres   IN     VARCHAR2,
-                                     out_cur_bands       OUT SYS_REFCURSOR);
+    PROCEDURE get_most_recent_bands (
+        in_additional_band_id   IN     INTEGER,
+        in_band_genres          IN     VARCHAR2,
+        out_cur_bands              OUT SYS_REFCURSOR);
 
     PROCEDURE get_multi_instrumentalists (
         in_number           IN     INTEGER,

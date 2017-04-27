@@ -1,4 +1,4 @@
-/* Formatted on 4/25/2017 4:27:47 PM (QP5 v5.300) */
+/* Formatted on 4/27/2017 1:44:11 PM (QP5 v5.300) */
 CREATE OR REPLACE PACKAGE BODY examen02.utils_pkg
 AS
     PROCEDURE get_band_members_instruments (
@@ -63,8 +63,48 @@ AS
             ORDER BY concert_id, band_order;
     END get_concert_bands;
 
-    PROCEDURE get_most_recent_bands (in_band_genres   IN     VARCHAR2,
-                                     out_cur_bands       OUT SYS_REFCURSOR)
+    PROCEDURE get_concert_bands (in_concert_id    IN     INTEGER,
+                                 in_concert_ids   IN     VARCHAR2,
+                                 out_cur_bands       OUT SYS_REFCURSOR)
+    IS
+    BEGIN
+        OPEN out_cur_bands FOR
+              SELECT c_b.concert_id,
+                     ci.country_name,
+                     ci.city_name,
+                     CV.venue_name,
+                     co.concert_date,
+                     b.band_name,
+                     c_b.band_order,
+                     c_b.played_songs,
+                     mg.genre_name
+                FROM examen02.concerts_bands c_b
+                     INNER JOIN examen02.bands b ON c_b.band_id = b.band_id
+                     INNER JOIN examen02.concerts co
+                         ON c_b.concert_id = co.concert_id
+                     INNER JOIN examen02.concert_venues CV
+                         ON co.concert_venue_id = CV.concert_venue_id
+                     INNER JOIN examen02.cities ci ON CV.city_id = ci.city_id
+                     INNER JOIN examen02.music_genres mg
+                         ON b.music_genre_id = mg.music_genre_id
+               WHERE c_b.concert_id IN
+                         (    SELECT REGEXP_SUBSTR (in_concert_ids,
+                                                    '[^,]+',
+                                                    1,
+                                                    LEVEL)
+                                FROM DUAL
+                          CONNECT BY REGEXP_SUBSTR (in_concert_ids,
+                                                    '[^,]+',
+                                                    1,
+                                                    LEVEL)
+                                         IS NOT NULL)
+            ORDER BY c_b.concert_id, c_b.band_order;
+    END get_concert_bands;
+
+    PROCEDURE get_most_recent_bands (
+        in_additional_band_id   IN     INTEGER,
+        in_band_genres          IN     VARCHAR2,
+        out_cur_bands              OUT SYS_REFCURSOR)
     AS
     BEGIN
         OPEN out_cur_bands FOR
@@ -89,7 +129,11 @@ AS
                                                           1,
                                                           LEVEL)
                                                IS NOT NULL))
-             WHERE band_rank = 1;
+             WHERE band_rank = 1
+            UNION ALL
+            SELECT band_id, music_genre_id
+              FROM examen02.bands
+             WHERE band_id = in_additional_band_id;
     END;
 
     PROCEDURE get_multi_instrumentalists (
@@ -144,7 +188,11 @@ AS
     IS
     BEGIN
         OPEN out_cur_venues FOR
-            SELECT CV.concert_venue_id, CV.city_id, c.country_name
+            SELECT CV.concert_venue_id,
+                   CV.city_id,
+                   ROW_NUMBER ()
+                   OVER (PARTITION BY c.country_name ORDER BY CV.capacity)
+                       AS venue_order
               FROM examen02.concert_venues  CV
                    INNER JOIN examen02.cities c ON CV.city_id = c.city_id
              WHERE     capacity >= in_venue_capacity
