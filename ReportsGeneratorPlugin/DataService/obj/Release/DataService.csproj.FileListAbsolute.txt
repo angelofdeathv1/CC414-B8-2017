@@ -1,0 +1,6 @@
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\DataService\bin\Release\DataService.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\DataService\bin\Release\DataService.pdb
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\DataService\bin\Release\Oracle.DataAccess.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\DataService\obj\Release\DataService.csprojResolveAssemblyReference.cache
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\DataService\obj\Release\DataService.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\DataService\obj\Release\DataService.pdb

@@ -1,0 +1,20 @@
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Debug\Engine.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Debug\Engine.pdb
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Debug\DataService.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Debug\EPPlus.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Debug\Oracle.DataAccess.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Debug\DataService.pdb
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Debug\EPPlus.xml
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\obj\Debug\Engine.csprojResolveAssemblyReference.cache
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\obj\Debug\Engine.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\obj\Debug\Engine.pdb
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\Engine\bin\Debug\Engine.dll
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\Engine\bin\Debug\Engine.pdb
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\Engine\bin\Debug\DataService.dll
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\Engine\bin\Debug\EPPlus.dll
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\Engine\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\Engine\bin\Debug\DataService.pdb
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\Engine\bin\Debug\EPPlus.xml
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\Engine\obj\Debug\Engine.csprojResolveAssemblyReference.cache
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\Engine\obj\Debug\Engine.dll
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\Engine\obj\Debug\Engine.pdb

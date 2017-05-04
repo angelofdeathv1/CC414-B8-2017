@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Controller_Ext.aspx.cs" Inherits="ReportsGeneratorPlugin.PL.Controller_Ext" validateRequest="false" %>

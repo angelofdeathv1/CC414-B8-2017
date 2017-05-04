@@ -1,0 +1,36 @@
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\ReportsGeneratorPlugin.dll.config
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\ReportsGeneratorPlugin.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\ReportsGeneratorPlugin.pdb
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Engine.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Newtonsoft.Json.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Slapper.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\EPPlus.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\DataService.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Oracle.DataAccess.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Engine.pdb
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Newtonsoft.Json.xml
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Slapper.pdb
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Slapper.xml
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\EPPlus.xml
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\DataService.pdb
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\obj\Debug\ReportsGeneratorPlugin.csprojResolveAssemblyReference.cache
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\obj\Debug\ReportsGeneratorPlugin.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\ReportsGeneratorPlugin\obj\Debug\ReportsGeneratorPlugin.pdb
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\ReportsGeneratorPlugin.dll.config
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\ReportsGeneratorPlugin.dll
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\ReportsGeneratorPlugin.pdb
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Engine.dll
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Newtonsoft.Json.dll
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Slapper.dll
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\EPPlus.dll
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\DataService.dll
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Oracle.DataAccess.dll
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Engine.pdb
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Newtonsoft.Json.xml
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Slapper.pdb
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\Slapper.xml
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\EPPlus.xml
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\bin\DataService.pdb
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\obj\Debug\ReportsGeneratorPlugin.csprojResolveAssemblyReference.cache
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\obj\Debug\ReportsGeneratorPlugin.dll
+C:\Users\Angel Arambula\Documents\Visual Studio 2015\Projects\ReportsGeneratorPlugin\ReportsGeneratorPlugin\obj\Debug\ReportsGeneratorPlugin.pdb

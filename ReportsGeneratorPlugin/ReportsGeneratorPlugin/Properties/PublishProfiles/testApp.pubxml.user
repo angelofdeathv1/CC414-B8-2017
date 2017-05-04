@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\ReportsGeneratorPlugin</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/DataService.dll">
+      <publishTime>05/03/2017 16:10:54</publishTime>
+    </File>
+    <File Include="bin/DataService.pdb">
+      <publishTime>05/03/2017 16:10:54</publishTime>
+    </File>
+    <File Include="bin/Engine.dll">
+      <publishTime>05/03/2017 16:10:54</publishTime>
+    </File>
+    <File Include="bin/Engine.pdb">
+      <publishTime>05/03/2017 16:10:54</publishTime>
+    </File>
+    <File Include="bin/EPPlus.dll">
+      <publishTime>01/08/2016 16:30:35</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/18/2016 16:45:24</publishTime>
+    </File>
+    <File Include="bin/Oracle.DataAccess.dll">
+      <publishTime>05/29/2014 13:12:56</publishTime>
+    </File>
+    <File Include="bin/ReportsGeneratorPlugin.dll">
+      <publishTime>05/03/2017 16:10:54</publishTime>
+    </File>
+    <File Include="bin/ReportsGeneratorPlugin.pdb">
+      <publishTime>05/03/2017 16:10:54</publishTime>
+    </File>
+    <File Include="bin/Slapper.dll">
+      <publishTime>02/20/2016 12:59:50</publishTime>
+    </File>
+    <File Include="bin/Slapper.pdb">
+      <publishTime>02/20/2016 12:59:50</publishTime>
+    </File>
+    <File Include="masterpages/main/main.Master">
+      <publishTime>05/31/2016 15:25:37</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/13/2016 10:37:04</publishTime>
+    </File>
+    <File Include="PL/admin/apps-admin.aspx">
+      <publishTime>05/31/2016 16:07:32</publishTime>
+    </File>
+    <File Include="PL/admin/conns-admin.aspx">
+      <publishTime>05/31/2016 16:10:13</publishTime>
+    </File>
+    <File Include="PL/admin/forms/connection-form.aspx">
+      <publishTime>06/01/2016 10:41:56</publishTime>
+    </File>
+    <File Include="PL/admin/forms/report-test-form.aspx">
+      <publishTime>06/06/2016 15:41:18</publishTime>
+    </File>
+    <File Include="PL/admin/forms/reporter-form.aspx">
+      <publishTime>05/24/2016 13:22:18</publishTime>
+    </File>
+    <File Include="PL/admin/js/data-apps-admin.js">
+      <publishTime>05/23/2016 13:54:21</publishTime>
+    </File>
+    <File Include="PL/admin/js/data-conns-admin.js">
+      <publishTime>06/01/2016 10:45:13</publishTime>
+    </File>
+    <File Include="PL/admin/js/data-report-test.js">
+      <publishTime>06/06/2016 15:42:48</publishTime>
+    </File>
+    <File Include="PL/admin/js/data-reporter-admin.js">
+      <publishTime>05/24/2016 13:41:07</publishTime>
+    </File>
+    <File Include="PL/admin/js/jqgrid-apps-admin.js">
+      <publishTime>06/01/2016 10:37:02</publishTime>
+    </File>
+    <File Include="PL/admin/js/jqgrid-conns-admin.js">
+      <publishTime>06/01/2016 10:37:12</publishTime>
+    </File>
+    <File Include="PL/admin/js/jqgrid-report-test.js">
+      <publishTime>06/01/2016 13:23:34</publishTime>
+    </File>
+    <File Include="PL/admin/js/jqgrid-reporter-admin.js">
+      <publishTime>06/01/2016 10:37:42</publishTime>
+    </File>
+    <File Include="PL/admin/reporter-admin.aspx">
+      <publishTime>05/24/2016 11:45:41</publishTime>
+    </File>
+    <File Include="PL/Controller.asmx">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/Controller.aspx">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/Controller_Ext.asmx">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/Controller_Ext.aspx">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/GridPage.aspx">
+      <publishTime>05/30/2016 17:56:24</publishTime>
+    </File>
+    <File Include="PL/UI/css/bootstrap-simplex.min.css">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/bootstrap.min.css">
+      <publishTime>05/19/2016 15:50:50</publishTime>
+    </File>
+    <File Include="PL/UI/css/bootstrap.min.css.map">
+      <publishTime>05/19/2016 15:50:50</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-bg_flat_0_999999_40x100.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-bg_glass_75_ffffff_1x400.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-bg_inset-soft_95_fef1ec_1x100.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-icons_222222_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-icons_428bca_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-icons_454545_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-icons_555555_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-icons_888888_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-icons_999999_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-icons_f0ad4e_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-icons_f6cf3b_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/custom-theme/images/ui-icons_ffffff_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/font-awesome.min.css">
+      <publishTime>05/19/2016 16:05:15</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-bg_flat_0_999999_40x100.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-bg_glass_75_ffffff_1x400.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-bg_inset-soft_95_fef1ec_1x100.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-icons_222222_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-icons_428bca_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-icons_454545_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-icons_555555_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-icons_888888_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-icons_999999_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-icons_f0ad4e_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-icons_f6cf3b_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/images/ui-icons_ffffff_256x240.png">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/jqGrid.overrides.css">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/jquery-ui-1.10.3.custom.css">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/jquery-ui.min.css">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/prettify.css">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/css/ui.jqgrid.css">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/fonts/fontawesome-webfontd41d.eot">
+      <publishTime>05/20/2016 09:51:36</publishTime>
+    </File>
+    <File Include="PL/UI/fonts/fontawesome-webfonte0a5.eot">
+      <publishTime>05/20/2016 09:51:36</publishTime>
+    </File>
+    <File Include="PL/UI/fonts/fontawesome-webfonte0a5.html">
+      <publishTime>05/20/2016 09:51:36</publishTime>
+    </File>
+    <File Include="PL/UI/fonts/fontawesome-webfonte0a5.svg">
+      <publishTime>05/20/2016 09:51:36</publishTime>
+    </File>
+    <File Include="PL/UI/fonts/fontawesome-webfonte0a5.ttf">
+      <publishTime>05/20/2016 09:51:36</publishTime>
+    </File>
+    <File Include="PL/UI/fonts/fontawesome-webfonte0a5.woff">
+      <publishTime>05/20/2016 09:51:36</publishTime>
+    </File>
+    <File Include="PL/UI/js/bootstrap-show-password.js">
+      <publishTime>05/31/2016 16:42:06</publishTime>
+    </File>
+    <File Include="PL/UI/js/bootstrap.min.js">
+      <publishTime>05/19/2016 15:51:19</publishTime>
+    </File>
+    <File Include="PL/UI/js/colorbox/css/colorbox.css">
+      <publishTime>05/23/2016 17:01:34</publishTime>
+    </File>
+    <File Include="PL/UI/js/colorbox/css/images/controls.png">
+      <publishTime>05/23/2016 17:01:34</publishTime>
+    </File>
+    <File Include="PL/UI/js/colorbox/css/images/loading.gif">
+      <publishTime>05/23/2016 17:01:34</publishTime>
+    </File>
+    <File Include="PL/UI/js/colorbox/js/jquery.colorbox-min.js">
+      <publishTime>05/23/2016 17:01:34</publishTime>
+    </File>
+    <File Include="PL/UI/js/common-jqGrid.js">
+      <publishTime>05/19/2016 18:11:15</publishTime>
+    </File>
+    <File Include="PL/UI/js/common-js.js">
+      <publishTime>06/01/2016 13:18:12</publishTime>
+    </File>
+    <File Include="PL/UI/js/grid.locale-en.js">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/js/html5shiv.js">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/css/ui.jqgrid-bootstrap-ui.css">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/css/ui.jqgrid-bootstrap.css">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/css/ui.jqgrid.css">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-ar.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-bg.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-ca.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-cn.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-cs.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-de.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-dk.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-el.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-en.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-es.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-fa.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-fi.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-fr.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-gl.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-he.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-hr.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-hu.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-id.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-is.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-it.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-ja.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-kr.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-lt.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-me.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-nl.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-no.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-pl.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-pt-br.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-pt.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-ro.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-ru.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-sk.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-sq.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-sr-latin.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-sr.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-sv.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-th.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-tr.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-tw.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-uk.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/i18n/grid.locale-vi.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/jquery-1.11.0.min.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/js/jquery.jqGrid.min.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/plugins/grid.addons.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/plugins/grid.postext.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/plugins/grid.setcolumns.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/plugins/jquery.contextmenu.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/plugins/jquery.searchFilter.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/plugins/jquery.tablednd.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/plugins/searchFilter.css">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/plugins/ui.multiselect.css">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/JQGrid-bootstrap/plugins/ui.multiselect.js">
+      <publishTime>05/19/2016 18:36:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/jqgrid-grid-page.js">
+      <publishTime>06/08/2016 09:23:18</publishTime>
+    </File>
+    <File Include="PL/UI/js/jquery-cloneya/js/jquery-cloneya.js">
+      <publishTime>05/31/2016 17:58:27</publishTime>
+    </File>
+    <File Include="PL/UI/js/jquery-cloneya/js/jquery-cloneya.min.js">
+      <publishTime>05/31/2016 17:58:27</publishTime>
+    </File>
+    <File Include="PL/UI/js/jquery-migrate.min.js">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/js/jquery-ui-1.10.3.custom.min.js">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/js/jquery-ui.min.js">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/js/jquery.blockui.js">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/js/jquery.jqGrid.min.js">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/js/jquery.min.js">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/js/jsDate.js">
+      <publishTime>05/20/2016 09:46:12</publishTime>
+    </File>
+    <File Include="PL/UI/js/prettify.js">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="PL/UI/js/reporter-js.js">
+      <publishTime>05/24/2016 15:41:51</publishTime>
+    </File>
+    <File Include="PL/UI/js/respond.min.js">
+      <publishTime>04/20/2016 15:20:45</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/03/2017 16:11:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

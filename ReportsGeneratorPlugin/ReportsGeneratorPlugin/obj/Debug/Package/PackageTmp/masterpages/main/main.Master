@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="ReportsGeneratorPlugin.masterpages.main.main" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <title>Reporter API</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--[if lt IE 9]>
+        <script src="../../PL/UI/js/html5shiv.js"></script>
+        <script src="../../PL/UI/js/respond.min.js"></script>
+     <![endif]-->
+
+    <link href="../../PL/UI/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../PL/UI/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../PL/UI/js/colorbox/css/colorbox.css" rel="stylesheet" />
+    <style>
+        body {
+            padding-top: 70px;
+            padding-bottom: 30px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="ContentHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Reporter Console</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <asp:ContentPlaceHolder ID="ContentMenu" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </nav>
+    <div id='divError' style="text-align: center;">
+        <asp:Label ID="lbMessage" runat="server" Text=""></asp:Label>
+    </div>
+    <div id="alerts"></div>
+    <div class="container-fluid">
+        <asp:ContentPlaceHolder ID="ContentBody" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <script src="../../PL/UI/js/jquery.min.js"></script>
+    <script src="../../PL/UI/js/bootstrap.min.js"></script>
+    <script src="../../PL/UI/js/jquery.blockui.js"></script>
+    <script src="../../PL/UI/js/colorbox/js/jquery.colorbox-min.js"></script>
+    <script src="../../PL/UI/js/jsDate.js"></script>
+    <script src="../../PL/UI/js/common-js.js"></script>
+    <script src="../../PL/UI/js/reporter-js.js"></script>
+    <script type="text/javascript">
+        var JSON_JQDATA_URI = '<%=JSON_JQDATA_URI %>';
+        var JSON_JQGRID_URI = '<%=JSON_JQGRID_URI %>';
+        var JSON_EXPORT_URI = '<%=JSON_EXPORT_URI %>';
+        var JSON_JQGRID_STRUCT_URI = '<%=JSON_JQGRID_STRUCT_URI %>';
+        var JSON_JQGRID_STRUCT_JSONP_URI = '<%=JSON_JQGRID_STRUCT_JSONP_URI %>';
+        var JSON_JQDATAGRID_URI = '<%=JSON_JQDATAGRID_URI %>';
+        var REPORTER = '<%=JSON_RAW_URI %>';
+        var AJAX_CONTROLLER = '<%=AJAX_CONTROLLER%>';
+        var AJAX_GRID = '<%=AJAX_GRID %>';
+        inputmsg = "<%=lbMessage.ClientID %>";
+    </script>
+    <asp:ContentPlaceHolder ID="ContentFooter" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

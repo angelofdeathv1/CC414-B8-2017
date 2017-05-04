@@ -1,0 +1,10 @@
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Release\Engine.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Release\Engine.pdb
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Release\DataService.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Release\EPPlus.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Release\Oracle.DataAccess.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Release\DataService.pdb
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\bin\Release\EPPlus.xml
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\obj\Release\Engine.csprojResolveAssemblyReference.cache
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\obj\Release\Engine.dll
+C:\Data\Projects\Visual Studio 2015\ReportsGeneratorPlugin\Engine\obj\Release\Engine.pdb

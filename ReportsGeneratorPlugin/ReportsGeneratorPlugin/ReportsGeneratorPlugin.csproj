@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1453A288-DD74-4A2A-A1CB-F7FEF81A72B9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReportsGeneratorPlugin</RootNamespace>
+    <AssemblyName>ReportsGeneratorPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Slapper, Version=1.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Slapper.AutoMapper.1.0.0.8\lib\Slapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PL\admin\apps-admin.aspx" />
+    <Content Include="PL\admin\conns-admin.aspx" />
+    <Content Include="PL\admin\forms\connection-form.aspx" />
+    <Content Include="PL\admin\forms\report-test-form.aspx" />
+    <Content Include="PL\admin\forms\reporter-form.aspx" />
+    <Content Include="PL\admin\js\data-apps-admin.js" />
+    <Content Include="PL\admin\js\data-conns-admin.js" />
+    <Content Include="PL\admin\js\data-report-test.js" />
+    <Content Include="PL\admin\js\data-reporter-admin.js" />
+    <Content Include="PL\admin\js\jqgrid-apps-admin.js" />
+    <Content Include="PL\admin\js\jqgrid-conns-admin.js" />
+    <Content Include="PL\admin\js\jqgrid-report-test.js" />
+    <Content Include="PL\admin\js\jqgrid-reporter-admin.js" />
+    <Content Include="PL\Controller.asmx" />
+    <Content Include="PL\Controller.aspx" />
+    <Content Include="PL\Controller_Ext.asmx" />
+    <Content Include="PL\Controller_Ext.aspx" />
+    <Content Include="PL\admin\reporter-admin.aspx" />
+    <Content Include="PL\UI\css\bootstrap-simplex.min.css" />
+    <Content Include="PL\UI\css\bootstrap.min.css" />
+    <Content Include="PL\UI\css\images\ui-bg_flat_0_999999_40x100.png" />
+    <Content Include="PL\UI\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="PL\UI\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="PL\UI\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="PL\UI\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="PL\UI\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="PL\UI\css\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="PL\UI\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="PL\UI\css\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="PL\UI\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="PL\UI\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="PL\UI\css\images\ui-icons_428bca_256x240.png" />
+    <Content Include="PL\UI\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="PL\UI\css\images\ui-icons_555555_256x240.png" />
+    <Content Include="PL\UI\css\images\ui-icons_888888_256x240.png" />
+    <Content Include="PL\UI\css\images\ui-icons_999999_256x240.png" />
+    <Content Include="PL\UI\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="PL\UI\css\images\ui-icons_f0ad4e_256x240.png" />
+    <Content Include="PL\UI\css\images\ui-icons_f6cf3b_256x240.png" />
+    <Content Include="PL\UI\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="PL\UI\css\jquery-ui-1.10.3.custom.css" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-bg_flat_0_999999_40x100.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-icons_222222_256x240.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-icons_428bca_256x240.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-icons_454545_256x240.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-icons_555555_256x240.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-icons_888888_256x240.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-icons_999999_256x240.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-icons_f0ad4e_256x240.png" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-icons_f6cf3b_256x240.png" />
+    <Content Include="PL\GridPage.aspx" />
+    <Content Include="PL\UI\fonts\fontawesome-webfonte0a5.html" />
+    <Content Include="PL\UI\fonts\fontawesome-webfonte0a5.svg" />
+    <Content Include="PL\UI\js\bootstrap-show-password.js" />
+    <Content Include="PL\UI\js\bootstrap.min.js" />
+    <Content Include="PL\UI\js\colorbox\css\colorbox.css" />
+    <Content Include="PL\UI\js\colorbox\css\images\controls.png" />
+    <Content Include="PL\UI\js\colorbox\css\images\loading.gif" />
+    <Content Include="PL\UI\js\colorbox\js\jquery.colorbox-min.js" />
+    <Content Include="PL\UI\js\common-jqGrid.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\css\ui.jqgrid-bootstrap-ui.css" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\css\ui.jqgrid-bootstrap.css" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\css\ui.jqgrid.css" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-ar.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-bg.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-ca.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-cn.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-cs.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-de.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-dk.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-el.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-en.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-es.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-fa.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-fi.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-fr.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-gl.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-he.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-hr.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-hu.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-id.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-is.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-it.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-ja.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-kr.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-lt.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-me.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-nl.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-no.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-pl.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-pt-br.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-pt.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-ro.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-ru.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-sk.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-sq.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-sr-latin.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-sr.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-sv.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-th.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-tr.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-tw.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-uk.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\i18n\grid.locale-vi.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\jquery-1.11.0.min.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\js\jquery.jqGrid.min.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\plugins\grid.addons.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\plugins\grid.postext.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\plugins\grid.setcolumns.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\plugins\jquery.contextmenu.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\plugins\jquery.searchFilter.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\plugins\jquery.tablednd.js" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\plugins\searchFilter.css" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\plugins\ui.multiselect.css" />
+    <Content Include="PL\UI\js\JQGrid-bootstrap\plugins\ui.multiselect.js" />
+    <Content Include="PL\UI\js\jqgrid-grid-page.js" />
+    <Content Include="PL\UI\js\jquery-cloneya\js\jquery-cloneya.js" />
+    <Content Include="PL\UI\js\jquery-cloneya\js\jquery-cloneya.min.js" />
+    <Content Include="PL\UI\js\jquery-migrate.min.js" />
+    <Content Include="PL\UI\js\jquery.min.js" />
+    <Content Include="PL\UI\css\custom-theme\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="PL\UI\css\font-awesome.min.css" />
+    <Content Include="PL\UI\css\jqGrid.overrides.css" />
+    <Content Include="PL\UI\css\jquery-ui.min.css" />
+    <Content Include="PL\UI\css\prettify.css" />
+    <Content Include="PL\UI\css\ui.jqgrid.css" />
+    <Content Include="PL\UI\js\grid.locale-en.js" />
+    <Content Include="PL\UI\js\html5shiv.js" />
+    <Content Include="PL\UI\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="PL\UI\js\jquery-ui.min.js" />
+    <Content Include="PL\UI\js\jquery.jqGrid.min.js" />
+    <Content Include="PL\UI\js\jsDate.js" />
+    <Content Include="PL\UI\js\prettify.js" />
+    <Content Include="PL\UI\js\reporter-js.js" />
+    <Content Include="PL\UI\js\respond.min.js" />
+    <Content Include="PL\UI\js\common-js.js" />
+    <Content Include="PL\UI\js\jquery.blockui.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="masterpages\main\main.Master.cs">
+      <DependentUpon>main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masterpages\main\main.Master.designer.cs">
+      <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PL\admin\apps-admin.aspx.cs">
+      <DependentUpon>apps-admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PL\admin\apps-admin.aspx.designer.cs">
+      <DependentUpon>apps-admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PL\admin\conns-admin.aspx.cs">
+      <DependentUpon>conns-admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PL\admin\conns-admin.aspx.designer.cs">
+      <DependentUpon>conns-admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PL\admin\forms\connection-form.aspx.cs">
+      <DependentUpon>connection-form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PL\admin\forms\connection-form.aspx.designer.cs">
+      <DependentUpon>connection-form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PL\admin\forms\report-test-form.aspx.cs">
+      <DependentUpon>report-test-form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PL\admin\forms\report-test-form.aspx.designer.cs">
+      <DependentUpon>report-test-form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PL\admin\forms\reporter-form.aspx.cs">
+      <DependentUpon>reporter-form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PL\admin\forms\reporter-form.aspx.designer.cs">
+      <DependentUpon>reporter-form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Controller.asmx.cs">
+      <DependentUpon>Controller.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PL\Controller.aspx.cs">
+      <DependentUpon>Controller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PL\Controller.aspx.designer.cs">
+      <DependentUpon>Controller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PL\Controller_Ext.asmx.cs">
+      <DependentUpon>Controller_Ext.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PL\Controller_Ext.aspx.cs">
+      <DependentUpon>Controller_Ext.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PL\Controller_Ext.aspx.designer.cs">
+      <DependentUpon>Controller_Ext.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PL\GridPage.aspx.cs">
+      <DependentUpon>GridPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PL\GridPage.aspx.designer.cs">
+      <DependentUpon>GridPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PL\admin\reporter-admin.aspx.cs">
+      <DependentUpon>reporter-admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PL\admin\reporter-admin.aspx.designer.cs">
+      <DependentUpon>reporter-admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="XLS_DOWNLOADS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Engine\Engine.csproj">
+      <Project>{EFA3E00D-E0A3-4FA0-90B3-ED4A3BE33A14}</Project>
+      <Name>Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="masterpages\main\main.Master" />
+    <None Include="PL\UI\css\bootstrap.css.map" />
+    <Content Include="PL\UI\css\bootstrap.min.css.map" />
+    <Content Include="PL\UI\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="PL\UI\fonts\fontawesome-webfonte0a5.eot" />
+    <Content Include="PL\UI\fonts\fontawesome-webfonte0a5.ttf" />
+    <Content Include="PL\UI\fonts\fontawesome-webfonte0a5.woff" />
+    <None Include="PL\UI\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="PL\UI\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="PL\UI\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="PL\UI\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="PL\UI\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\IIS.pubxml" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Properties\PublishProfiles\testApp.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61648</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
